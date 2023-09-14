@@ -1,0 +1,223 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    transition: .3s;
+   
+}
+.container{
+    position: absolute;
+    top: 5%;
+    left: 31%;
+    margin: auto;
+
+}
+.addTask{
+    width: 100%;
+    text-align: center;
+    margin-bottom: -50px;
+    color: #ffffffff;
+}
+.create-input{
+    background-color: blueviolet;
+    width: 600px;
+    height: 150px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.create-input input{
+    width: 280px;
+    height: 40px;
+    border-radius: 20px;
+    outline: none;
+    padding: 10px;
+    margin-top: 30px;
+}
+.create-input button{
+width: 140px;
+height: 40px;
+border-radius: 50px;
+background-color: rgb(65, 202, 65);
+border: none;
+color: white;
+cursor: pointer;
+margin-top: 30px;
+
+}
+
+/* start the list container */
+.list-container{
+    background-color: blueviolet;
+    color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.list-container ul{
+       font-size: 20px;
+    list-style: none;
+}
+ul li{
+    margin: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background: #ffffffff;
+    color: rgb(0, 0, 0);
+    border-radius: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} 
+ul li.checked{
+    opacity: 0.7;
+}
+li span{
+   background: red;
+   border-radius: 30px;
+   padding: 10px;
+   font-size: 15px;
+   cursor: pointer;
+   color: #ffffffff;
+   font-weight: 600;
+}
+.list-container h2{
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+}
+
+button.deleteAll{
+  background-color: rgb(219, 10, 10);
+}
+
+/* Dark Mode Option */
+.dark-mode-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 20px;
+  right: 15px;
+  margin: 0;
+  z-index: 20000000000;
+}
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+
+.label {
+  background-color: #111;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 5px;
+  border-radius: 50px;
+  height: 26px;
+  width: 50px;
+}
+
+.fa-moon{
+  color: #f1c40f;
+}
+
+.fa-sun {
+  color: #f39c12;
+}
+
+.ball {
+  background-color: #fff;
+  position: absolute;
+top: 2px;
+left: 2px;
+  border-radius: 50%;
+  height: 22px;
+  width: 22px;
+  transition:transform  0.2s linear;
+}
+
+.checkbox:checked + .label .ball{
+  transform: translateX(24px);
+}
+
+body.dark{
+    background-color: #1a1919;
+}
+.create-input.dark{
+  background-color: rgb(6, 184, 216);
+}
+
+.list-container.dark{
+    background-color: rgb(6, 184, 216);
+}
+h1.dark{
+   color: black;
+}
+h2.dark{
+   color: black;
+}
+button.dark{
+    background-color:rgb(158, 7, 196) ;
+}
+
+/* Small */
+@media screen and (max-width: 767px){
+   .create-input{
+    width: 320px;
+    padding: 5px;
+    height: 250px;
+   flex-direction: column;
+   align-items: center;
+   margin-top: 20px;
+   }
+   .create-input input{
+    width: 100%;
+    display: block;
+    margin-top: 70px;
+   }
+ .create-input  button{
+    width: 100%;
+    margin-top: -15px;
+   }
+   .container{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    
+}
+.addTask{
+    margin-bottom: -70px;
+}
+.list-container{
+    max-width: 320px;
+}
+ul li{
+  margin-left: -10px;
+  width: 300px;
+  font-size: 18px;
+}
+}
+
+
+/* medium */
+@media(min-width: 768px) and (max-width: 1023px){
+.container{
+    left: 20%;
+}
+}
+
+
+
+/* large */
